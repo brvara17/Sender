@@ -1,0 +1,779 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: TxRX.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TxRX.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TxRX"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : TxRX
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v" into library work
+Parsing module <TxRX>.
+WARNING:HDLCompiler:568 - "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v" Line 283: Constant value is truncated to fit in <8> bits.
+WARNING:HDLCompiler:568 - "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v" Line 303: Constant value is truncated to fit in <8> bits.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TxRX>.
+WARNING:HDLCompiler:872 - "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v" Line 72: Using initial value of Value since it is never assigned
+WARNING:HDLCompiler:413 - "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v" Line 145: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v" Line 176: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v" Line 179: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v" Line 197: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v" Line 371: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v" Line 374: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TxRX>.
+    Related source file is "C:\Xilinx\XilinxProjects\FinalProject\UARTVara\TXRX.v".
+WARNING:Xst:647 - Input <IO_PB<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <StartTransmit>.
+    Found 32-bit register for signal <RX_ClockCounter>.
+    Found 1-bit register for signal <RX_StartBitRecieve>.
+    Found 8-bit register for signal <ValueE>.
+    Found 8-bit register for signal <IO_DSWreg1>.
+    Found 2-bit register for signal <TX_State>.
+    Found 8-bit register for signal <SendData>.
+    Found 1-bit register for signal <TX_OUT>.
+    Found 5-bit register for signal <TX_state_counter>.
+    Found 1-bit register for signal <IO_LED<7>>.
+    Found 1-bit register for signal <IO_LED<6>>.
+    Found 1-bit register for signal <IO_LED<5>>.
+    Found 1-bit register for signal <IO_LED<4>>.
+    Found 1-bit register for signal <IO_LED<3>>.
+    Found 1-bit register for signal <IO_LED<2>>.
+    Found 1-bit register for signal <IO_LED<1>>.
+    Found 1-bit register for signal <IO_LED<0>>.
+    Found 6-bit register for signal <count>.
+    Found 8-bit register for signal <DSWdata>.
+    Found 32-bit register for signal <Display_ClockCounter>.
+    Found 4-bit register for signal <StartDisplay>.
+    Found 32-bit register for signal <Minutes_ClockCounter>.
+    Found 1-bit register for signal <startMinutes>.
+    Found 32-bit register for signal <secdotCounter>.
+    Found 1-bit register for signal <secdotStart>.
+    Found 7-bit register for signal <firstDigit<6:0>>.
+    Found 8-bit register for signal <secondDigit>.
+    Found 8-bit register for signal <thirdDigit>.
+    Found 8-bit register for signal <fourthDigit>.
+    Found 32-bit register for signal <debounceCounter>.
+    Found 1-bit register for signal <debounceStart>.
+    Found 4-bit register for signal <F_LED>.
+    Found 4-bit register for signal <setfirstDigit>.
+    Found 4-bit register for signal <setsecondDigit>.
+    Found 1-bit register for signal <timerCountDown>.
+    Found 1-bit register for signal <timerExpiredStartTransmission>.
+    Found 4-bit register for signal <DisplaysecondDigit>.
+    Found 4-bit register for signal <DisplayfirstDigit>.
+    Found 4-bit register for signal <DisplaythirdDigit>.
+    Found 4-bit register for signal <DisplayfourthDigit>.
+    Found 32-bit register for signal <TX_ClockCounter>.
+    Found finite state machine <FSM_0> for signal <TX_State>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 2                                              |
+    | Clock              | StartTransmit (rising_edge)                    |
+    | Reset              | IO_PB[3]_GND_1_o_OR_63_o (positive)            |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit subtractor for signal <GND_1_o_GND_1_o_sub_33_OUT> created at line 169.
+    Found 7-bit subtractor for signal <GND_1_o_GND_1_o_sub_42_OUT> created at line 178.
+    Found 32-bit adder for signal <TX_ClockCounter[31]_GND_1_o_add_2_OUT> created at line 83.
+    Found 32-bit adder for signal <RX_ClockCounter[31]_GND_1_o_add_7_OUT> created at line 97.
+    Found 5-bit adder for signal <TX_state_counter[4]_GND_1_o_add_15_OUT> created at line 145.
+    Found 6-bit adder for signal <count[5]_GND_1_o_add_44_OUT> created at line 179.
+    Found 32-bit adder for signal <Display_ClockCounter[31]_GND_1_o_add_53_OUT> created at line 191.
+    Found 4-bit adder for signal <StartDisplay[3]_GND_1_o_add_55_OUT> created at line 197.
+    Found 32-bit adder for signal <Minutes_ClockCounter[31]_GND_1_o_add_63_OUT> created at line 206.
+    Found 32-bit adder for signal <secdotCounter[31]_GND_1_o_add_68_OUT> created at line 217.
+    Found 32-bit adder for signal <debounceCounter[31]_GND_1_o_add_98_OUT> created at line 329.
+    Found 4-bit subtractor for signal <GND_1_o_GND_1_o_sub_115_OUT<3:0>> created at line 371.
+    Found 4-bit subtractor for signal <GND_1_o_GND_1_o_sub_116_OUT<3:0>> created at line 374.
+    Found 16x8-bit Read Only RAM for signal <n0279>
+    Found 16x8-bit Read Only RAM for signal <DisplaysecondDigit[3]_PWR_1_o_wide_mux_82_OUT>
+    Found 1-bit 8-to-1 multiplexer for signal <TX_state_counter[2]_SendData[7]_Mux_14_o> created at line 144.
+    Found 32-bit comparator lessequal for signal <n0044> created at line 169
+    Found 6-bit comparator greater for signal <GND_1_o_count[5]_LessThan_40_o> created at line 177
+    Found 6-bit comparator greater for signal <count[5]_GND_1_o_LessThan_41_o> created at line 177
+    Found 32-bit comparator lessequal for signal <n0078> created at line 178
+    Found 4-bit comparator lessequal for signal <n0107> created at line 196
+    Found 4-bit comparator not equal for signal <n0164> created at line 344
+    Found 4-bit comparator not equal for signal <n0166> created at line 344
+    Found 4-bit comparator greater for signal <DisplayfirstDigit[3]_PWR_1_o_LessThan_106_o> created at line 344
+    Found 4-bit comparator greater for signal <DisplaysecondDigit[3]_PWR_1_o_LessThan_107_o> created at line 344
+    Found 8-bit comparator equal for signal <DSWdata[7]_IO_DSWreg1[7]_equal_129_o> created at line 394
+    Summary:
+	inferred   2 RAM(s).
+	inferred  13 Adder/Subtractor(s).
+	inferred 314 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+	inferred  26 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <TxRX> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x8-bit single-port Read Only RAM                    : 2
+# Adders/Subtractors                                   : 13
+ 32-bit adder                                          : 6
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 2
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 1
+ 6-bit subtractor                                      : 1
+ 7-bit subtractor                                      : 1
+# Registers                                            : 40
+ 1-bit register                                        : 16
+ 32-bit register                                       : 6
+ 4-bit register                                        : 8
+ 5-bit register                                        : 1
+ 6-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 7
+# Comparators                                          : 10
+ 32-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 2
+ 4-bit comparator lessequal                            : 1
+ 4-bit comparator not equal                            : 2
+ 6-bit comparator greater                              : 2
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 26
+ 1-bit 2-to-1 multiplexer                              : 9
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 15
+ 5-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <ValueE_0> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ValueE_3> (without init value) has a constant value of 0 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ValueE_4> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <thirdDigit_3> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <thirdDigit_7> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ValueE_1> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ValueE_5> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <F_LED_1> (without init value) has a constant value of 0 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <F_LED_2> (without init value) has a constant value of 0 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ValueE_2> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ValueE_6> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ValueE_7> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <TxRX>.
+The following registers are absorbed into counter <RX_ClockCounter>: 1 register on signal <RX_ClockCounter>.
+The following registers are absorbed into counter <Minutes_ClockCounter>: 1 register on signal <Minutes_ClockCounter>.
+The following registers are absorbed into counter <Display_ClockCounter>: 1 register on signal <Display_ClockCounter>.
+The following registers are absorbed into counter <secdotCounter>: 1 register on signal <secdotCounter>.
+The following registers are absorbed into counter <TX_ClockCounter>: 1 register on signal <TX_ClockCounter>.
+The following registers are absorbed into counter <debounceCounter>: 1 register on signal <debounceCounter>.
+The following registers are absorbed into counter <StartDisplay>: 1 register on signal <StartDisplay>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <TX_state_counter>: 1 register on signal <TX_state_counter>.
+INFO:Xst:3231 - The small RAM <Mram_DisplaysecondDigit[3]_PWR_1_o_wide_mux_82_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <DisplaysecondDigit> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_n0279> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <DisplayfirstDigit> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <TxRX> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x8-bit single-port distributed Read Only RAM        : 2
+# Adders/Subtractors                                   : 4
+ 4-bit subtractor                                      : 2
+ 6-bit subtractor                                      : 1
+ 7-bit subtractor                                      : 1
+# Counters                                             : 9
+ 32-bit up counter                                     : 6
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 107
+ Flip-Flops                                            : 107
+# Comparators                                          : 10
+ 32-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 2
+ 4-bit comparator lessequal                            : 1
+ 4-bit comparator not equal                            : 2
+ 6-bit comparator greater                              : 2
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 24
+ 1-bit 2-to-1 multiplexer                              : 9
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 14
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ValueE_0> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ValueE_3> (without init value) has a constant value of 0 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ValueE_4> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <thirdDigit_3> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <thirdDigit_7> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ValueE_1> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ValueE_5> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <F_LED_1> (without init value) has a constant value of 0 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <F_LED_2> (without init value) has a constant value of 0 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ValueE_2> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ValueE_6> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ValueE_7> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <thirdDigit_0> in Unit <TxRX> is equivalent to the following 5 FFs/Latches, which will be removed : <thirdDigit_1> <thirdDigit_2> <thirdDigit_4> <thirdDigit_5> <thirdDigit_6> 
+INFO:Xst:2261 - The FF/Latch <fourthDigit_0> in Unit <TxRX> is equivalent to the following 3 FFs/Latches, which will be removed : <fourthDigit_4> <fourthDigit_5> <fourthDigit_6> 
+INFO:Xst:2261 - The FF/Latch <fourthDigit_2> in Unit <TxRX> is equivalent to the following 2 FFs/Latches, which will be removed : <fourthDigit_3> <fourthDigit_7> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <TX_State[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+-------------------
+WARNING:Xst:1710 - FF/Latch <secondDigit_7> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <SendData_3> in Unit <TxRX> is equivalent to the following FF/Latch, which will be removed : <IO_DSWreg1_3> 
+INFO:Xst:2261 - The FF/Latch <DisplaythirdDigit_2> in Unit <TxRX> is equivalent to the following 3 FFs/Latches, which will be removed : <DisplaythirdDigit_3> <DisplayfourthDigit_2> <DisplayfourthDigit_3> 
+INFO:Xst:2261 - The FF/Latch <DisplaythirdDigit_0> in Unit <TxRX> is equivalent to the following FF/Latch, which will be removed : <DisplayfourthDigit_0> 
+INFO:Xst:2261 - The FF/Latch <DisplaythirdDigit_1> in Unit <TxRX> is equivalent to the following FF/Latch, which will be removed : <DisplayfourthDigit_1> 
+
+Optimizing unit <TxRX> ...
+WARNING:Xst:1710 - FF/Latch <fourthDigit_2> (without init value) has a constant value of 1 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <StartDisplay_3> (without init value) has a constant value of 0 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <StartDisplay_3> (without init value) has a constant value of 0 in block <TxRX>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TxRX, actual ratio is 7.
+INFO:Xst:2260 - The FF/Latch <fourthDigit_0> in Unit <TxRX> is equivalent to the following FF/Latch : <thirdDigit_0> 
+INFO:Xst:2261 - The FF/Latch <fourthDigit_0> in Unit <TxRX> is equivalent to the following FF/Latch, which will be removed : <thirdDigit_0> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 284
+ Flip-Flops                                            : 284
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TxRX.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 958
+#      GND                         : 1
+#      INV                         : 15
+#      LUT1                        : 186
+#      LUT2                        : 211
+#      LUT3                        : 24
+#      LUT4                        : 28
+#      LUT5                        : 17
+#      LUT6                        : 95
+#      MUXCY                       : 186
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 192
+# FlipFlops/Latches                : 284
+#      FD                          : 234
+#      FDE                         : 42
+#      FDR                         : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 42
+#      IBUF                        : 12
+#      OBUF                        : 30
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             282  out of  11440     2%  
+ Number of Slice LUTs:                  576  out of   5720    10%  
+    Number used as Logic:               576  out of   5720    10%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    581
+   Number with an unused Flip Flop:     299  out of    581    51%  
+   Number with an unused LUT:             5  out of    581     0%  
+   Number of fully used LUT-FF pairs:   277  out of    581    47%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                          45
+ Number of bonded IOBs:                  43  out of    102    42%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)    | Load  |
+-----------------------------------+--------------------------+-------+
+M_CLOCK                            | BUFGP                    | 218   |
+StartTransmit                      | BUFG                     | 37    |
+debounceStart                      | NONE(DisplaythirdDigit_0)| 11    |
+startMinutes                       | NONE(setfirstDigit_0)    | 10    |
+RX_StartBitRecieve                 | NONE(IO_LED_7)           | 8     |
+-----------------------------------+--------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.420ns (Maximum Frequency: 226.265MHz)
+   Minimum input arrival time before clock: 4.540ns
+   Maximum output required time after clock: 6.952ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'StartTransmit'
+  Clock period: 3.779ns (frequency: 264.603MHz)
+  Total number of paths / destination ports: 245 / 40
+-------------------------------------------------------------------------
+Delay:               3.779ns (Levels of Logic = 3)
+  Source:            count_2 (FF)
+  Destination:       DSWdata_7 (FF)
+  Source Clock:      StartTransmit rising
+  Destination Clock: StartTransmit rising
+
+  Data Path: count_2 to DSWdata_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             16   0.447   1.233  count_2 (count_2)
+     LUT6:I3->O            8   0.205   0.803  GND_1_o_GND_1_o_LessThan_43_o1 (GND_1_o_GND_1_o_LessThan_43_o)
+     LUT6:I5->O            1   0.205   0.580  Mmux_DSWdata[7]_RX_IN_MUX_107_o11 (DSWdata[7]_RX_IN_MUX_107_o)
+     LUT3:I2->O            1   0.205   0.000  DSWdata_7_dpot (DSWdata_7_dpot)
+     FDE:D                     0.102          DSWdata_7
+    ----------------------------------------
+    Total                      3.779ns (1.164ns logic, 2.615ns route)
+                                       (30.8% logic, 69.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'startMinutes'
+  Clock period: 4.420ns (frequency: 226.265MHz)
+  Total number of paths / destination ports: 202 / 10
+-------------------------------------------------------------------------
+Delay:               4.420ns (Levels of Logic = 4)
+  Source:            setsecondDigit_1 (FF)
+  Destination:       setfirstDigit_3 (FF)
+  Source Clock:      startMinutes rising
+  Destination Clock: startMinutes rising
+
+  Data Path: setsecondDigit_1 to setfirstDigit_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.755  setsecondDigit_1 (setsecondDigit_1)
+     LUT4:I2->O            1   0.203   0.808  Mmux_GND_1_o_GND_1_o_equal_108_o13 (Mmux_GND_1_o_GND_1_o_equal_108_o12)
+     LUT6:I3->O            6   0.205   0.745  Mmux_GND_1_o_GND_1_o_equal_108_o14 (Mmux_GND_1_o_GND_1_o_equal_108_o13)
+     LUT6:I5->O            6   0.205   0.745  Mmux_GND_1_o_GND_1_o_equal_108_o19 (GND_1_o_GND_1_o_equal_108_o)
+     LUT6:I5->O            1   0.205   0.000  Mmux_DisplayfirstDigit[3]_GND_1_o_mux_120_OUT13 (DisplaysecondDigit[3]_DisplaysecondDigit[3]_mux_121_OUT<2>)
+     FD:D                      0.102          setsecondDigit_2
+    ----------------------------------------
+    Total                      4.420ns (1.367ns logic, 3.053ns route)
+                                       (30.9% logic, 69.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'M_CLOCK'
+  Clock period: 4.208ns (frequency: 237.640MHz)
+  Total number of paths / destination ports: 9581 / 203
+-------------------------------------------------------------------------
+Delay:               4.208ns (Levels of Logic = 3)
+  Source:            Display_ClockCounter_14 (FF)
+  Destination:       Display_ClockCounter_0 (FF)
+  Source Clock:      M_CLOCK rising
+  Destination Clock: M_CLOCK rising
+
+  Data Path: Display_ClockCounter_14 to Display_ClockCounter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.961  Display_ClockCounter_14 (Display_ClockCounter_14)
+     LUT5:I0->O            5   0.203   1.059  n0104<31>2 (n0104<31>1)
+     LUT6:I1->O           17   0.203   1.028  n0104<31>7 (n0104)
+     LUT2:I1->O            1   0.205   0.000  Display_ClockCounter_0_rstpot (Display_ClockCounter_0_rstpot)
+     FD:D                      0.102          Display_ClockCounter_0
+    ----------------------------------------
+    Total                      4.208ns (1.160ns logic, 3.048ns route)
+                                       (27.6% logic, 72.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RX_StartBitRecieve'
+  Clock period: 1.733ns (frequency: 576.951MHz)
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               1.733ns (Levels of Logic = 1)
+  Source:            IO_LED_7 (FF)
+  Destination:       IO_LED_7 (FF)
+  Source Clock:      RX_StartBitRecieve rising
+  Destination Clock: RX_StartBitRecieve rising
+
+  Data Path: IO_LED_7 to IO_LED_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.981  IO_LED_7 (IO_LED_7)
+     LUT6:I0->O            1   0.203   0.000  IO_LED_7_rstpot (IO_LED_7_rstpot)
+     FD:D                      0.102          IO_LED_7
+    ----------------------------------------
+    Total                      1.733ns (0.752ns logic, 0.981ns route)
+                                       (43.4% logic, 56.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'StartTransmit'
+  Total number of paths / destination ports: 61 / 60
+-------------------------------------------------------------------------
+Offset:              4.540ns (Levels of Logic = 4)
+  Source:            RX_IN (PAD)
+  Destination:       DSWdata_7 (FF)
+  Destination Clock: StartTransmit rising
+
+  Data Path: RX_IN to DSWdata_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   1.222   1.111  RX_IN_IBUF (RX_IN_IBUF)
+     LUT3:I0->O            1   0.205   0.684  _n0400_inv_SW0 (N19)
+     LUT5:I3->O            1   0.203   0.808  _n0400_inv_rstpot (_n0400_inv_rstpot)
+     LUT3:I0->O            1   0.205   0.000  DSWdata_7_dpot (DSWdata_7_dpot)
+     FDE:D                     0.102          DSWdata_7
+    ----------------------------------------
+    Total                      4.540ns (1.937ns logic, 2.603ns route)
+                                       (42.7% logic, 57.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'debounceStart'
+  Total number of paths / destination ports: 49 / 22
+-------------------------------------------------------------------------
+Offset:              3.510ns (Levels of Logic = 2)
+  Source:            IO_PB<2> (PAD)
+  Destination:       DisplayfirstDigit_0 (FF)
+  Destination Clock: debounceStart rising
+
+  Data Path: IO_PB<2> to DisplayfirstDigit_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   0.961  IO_PB_2_IBUF (IO_PB_2_IBUF)
+     LUT3:I1->O            8   0.203   0.802  _n0403_inv1 (_n0403_inv)
+     FDE:CE                    0.322          DisplayfirstDigit_0
+    ----------------------------------------
+    Total                      3.510ns (1.747ns logic, 1.762ns route)
+                                       (49.8% logic, 50.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'M_CLOCK'
+  Total number of paths / destination ports: 118 / 17
+-------------------------------------------------------------------------
+Offset:              6.952ns (Levels of Logic = 4)
+  Source:            StartDisplay_0 (FF)
+  Destination:       IO_SSEG<6> (PAD)
+  Source Clock:      M_CLOCK rising
+
+  Data Path: StartDisplay_0 to IO_SSEG<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             15   0.447   1.086  StartDisplay_0 (StartDisplay_0)
+     LUT2:I0->O            6   0.203   0.973  StartDisplay[3]_GND_1_o_equal_72_o<3>11 (StartDisplay[3]_GND_1_o_equal_72_o<3>1)
+     LUT5:I2->O            4   0.205   0.684  IO_SSEG<0>211 (IO_SSEG<0>2)
+     LUT6:I5->O            1   0.205   0.579  IO_SSEG<0>1 (IO_SSEG_0_OBUF)
+     OBUF:I->O                 2.571          IO_SSEG_0_OBUF (IO_SSEG<0>)
+    ----------------------------------------
+    Total                      6.952ns (3.631ns logic, 3.321ns route)
+                                       (52.2% logic, 47.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RX_StartBitRecieve'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            IO_LED_7 (FF)
+  Destination:       IO_LED<7> (PAD)
+  Source Clock:      RX_StartBitRecieve rising
+
+  Data Path: IO_LED_7 to IO_LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  IO_LED_7 (IO_LED_7)
+     OBUF:I->O                 2.571          IO_LED_7_OBUF (IO_LED<7>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'StartTransmit'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.874ns (Levels of Logic = 1)
+  Source:            TX_OUT (FF)
+  Destination:       TX_OUT (PAD)
+  Source Clock:      StartTransmit rising
+
+  Data Path: TX_OUT to TX_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.447   0.856  TX_OUT (TX_OUT_OBUF)
+     OBUF:I->O                 2.571          TX_OUT_OBUF (TX_OUT)
+    ----------------------------------------
+    Total                      3.874ns (3.018ns logic, 0.856ns route)
+                                       (77.9% logic, 22.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock M_CLOCK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLOCK        |    4.208|         |         |         |
+debounceStart  |    2.092|         |         |         |
+startMinutes   |    1.576|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RX_StartBitRecieve
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+RX_StartBitRecieve|    1.733|         |         |         |
+StartTransmit     |    3.239|         |         |         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock StartTransmit
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+StartTransmit  |    3.779|         |         |         |
+startMinutes   |    3.239|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock debounceStart
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLOCK        |    2.912|         |         |         |
+StartTransmit  |    5.378|         |         |         |
+startMinutes   |    1.633|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock startMinutes
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+debounceStart  |    5.919|         |         |         |
+startMinutes   |    4.420|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.46 secs
+ 
+--> 
+
+Total memory usage is 265592 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   38 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+
